@@ -74,23 +74,18 @@ void fillInputs(vector< vector<byte> >& inputs)
 {
 	inputs.clear();
 
-	string currentFileName;
-	while (getline( cin, currentFileName )) {
-		if (currentFileName.empty()) {
-			continue;
-		}
+	string currentFileName = "./../test.txt";
 
-		// Есть еще один файл, который следует закодировать
-		inputs.push_back(vector<byte>());
+    // Есть еще один файл, который следует закодировать
+    inputs.push_back(vector<byte>());
 
-		ifstream file;
-		file.open(currentFileName.c_str());
+    ifstream file;
+    file.open(currentFileName.c_str());
 
-		byte value;
-		while (file >> value) {
-			(*inputs.rbegin()).push_back(value);
-		}
-	}
+    byte value;
+    while (file >> value) {
+        (*inputs.rbegin()).push_back(value);
+    }
 }
 
  bool isEqual(const vector<byte>& v1, const vector<byte>& v2)
@@ -138,9 +133,21 @@ int main()
 	// Распаковываем сжатые данные и проверяем, что они совпадают с оригиналом
 	for (unsigned int i = 0; i < input.size(); i++) {
 		vector<byte> output;
+
 		CInputStream iStream(compressed[i]);
-		COutputStream oStream(output);
-		Decode(iStream, oStream);
+        COutputStream oStream(output);
+        Decode(iStream, oStream);
+
+        std::cout << output.size() << " " << compressed[i].size() << std::endl;
+
+        std::ofstream myfile;
+
+        myfile.open("./../res.txt");
+        for (auto el:output) {
+            myfile << el;
+        }
+        myfile.close();
+
 		if (!isEqual(input[i], output)) {
 			cout << -1;
 			return 0;

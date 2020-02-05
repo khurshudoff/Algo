@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/khurshudov/Desktop/MADE/Algo/HW_9/main.cpp
+/Users/khurshudov/Desktop/MADE/Algo/HW_9/Huffman.h
+vector
+-
 iostream
 -
+fstream
+-
+string
+-
+
+/Users/khurshudov/Desktop/MADE/Algo/HW_9/main.cpp
 vector
 -
 map
@@ -19,4 +27,8 @@ algorithm
 -
 stack
 -
+iostream
+-
+Huffman.h
+/Users/khurshudov/Desktop/MADE/Algo/HW_9/Huffman.h
 

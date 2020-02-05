@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/khurshudov/Desktop/MADE/Algo/HW_16_2/main.cpp
+iostream
+-
+string
+-
+vector
+-
+algorithm
+-
+

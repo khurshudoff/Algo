@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/khurshudov/Desktop/MADE/Algo/11_1/main.cpp
+fstream
+-
+iostream
+-
+vector
+-
+map
+-
+stack
+-
+utility
+-
+algorithm
+-
+

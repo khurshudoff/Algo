@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/khurshudov/Desktop/MADE/Algo/HW_8_1/main.cpp
+assert.h
+-
+iostream
+-
+iterator
+-
+string
+-
+
